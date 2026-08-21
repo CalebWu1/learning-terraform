@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.nano"
+  instance_type = "t3.micro"
 
   # 2. Automatically install and start Tomcat when the server boots
   user_data = <<-EOF
